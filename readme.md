@@ -3,8 +3,8 @@
 # 1. 导包
 
 ```groovy
-annotationProcessor 'me.luzhuo.java.android:lib_compiler:1.0.5'
-compileOnly 'me.luzhuo.java.android:lib_compiler:1.0.5'
+annotationProcessor 'me.luzhuo.android:lib_compiler:1.0.5'
+compileOnly 'me.luzhuo.android:lib_compiler:1.0.5'
 ```
 
 # 2. 使用文档

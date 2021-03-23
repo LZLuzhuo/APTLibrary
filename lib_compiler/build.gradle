@@ -1,9 +1,5 @@
 apply plugin: 'java-library'
 
-def pomName = this.getName()
-def pomVersion = '1.0.5-SNAPSHOT'
-def pomDescription = 'This is a code generator that relies on annotations.'
-
 dependencies {
     implementation "com.squareup:javapoet:1.9.0"
     implementation "com.google.auto.service:auto-service:1.0-rc3"
