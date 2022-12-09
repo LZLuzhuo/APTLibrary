@@ -11,4 +11,4 @@ sourceCompatibility = "7"
 targetCompatibility = "7"
 
 apply from: 'maven.gradle'
-//apply from: 'jcenter.gradle'
+apply from: 'mavenCentral.gradle'

@@ -28,9 +28,7 @@ import javax.lang.model.util.SimpleAnnotationValueVisitor7;
 /**
  * Description:
  *
- * @Author: Luzhuo
- * @Creation Date: 2020/5/24 23:39
- * @Copyright: Copyright 2020 Luzhuo. All rights reserved.
+ * @author Luzhuo
  **/
 public final class WechatPayVisitor extends SimpleAnnotationValueVisitor7<Void, Void> {
     // Things to traverse

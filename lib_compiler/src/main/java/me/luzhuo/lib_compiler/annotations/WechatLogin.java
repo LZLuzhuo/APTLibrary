@@ -22,9 +22,7 @@ import java.lang.annotation.Target;
 /**
  * Description: Wechat login
  *
- * @Author: Luzhuo
- * @Creation Date: 2020/5/24 22:22
- * @Copyright: Copyright 2020 Luzhuo. All rights reserved.
+ * @author Luzhuo
  **/
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.SOURCE)

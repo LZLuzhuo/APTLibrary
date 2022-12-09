@@ -40,9 +40,7 @@ import me.luzhuo.lib_compiler.compiler.visitor.WechatPayVisitor;
 /**
  * Description:
  *
- * @Author: Luzhuo
- * @Creation Date: 2020/5/24 22:29
- * @Copyright: Copyright 2020 Luzhuo. All rights reserved.
+ * @author Luzhuo
  **/
 // Use not shown
 @SuppressWarnings("unused")
@@ -72,15 +70,15 @@ public class TemplateProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
-        generateWeixinLoginCode(roundEnvironment);
-        generateWeixinPayCode(roundEnvironment);
+        generateWechatLoginCode(roundEnvironment);
+        generateWechatPayCode(roundEnvironment);
         return true;
     }
 
     /**
      * Scan each class to get what we annotated
      */
-    public void scan(RoundEnvironment env, Class<? extends Annotation> annotation, AnnotationValueVisitor visitor) {
+    private void scan(RoundEnvironment env, Class<? extends Annotation> annotation, AnnotationValueVisitor visitor) {
         for (Element typeElement : env.getElementsAnnotatedWith(annotation)) {
             final List<? extends AnnotationMirror> annotationMirrors = typeElement.getAnnotationMirrors();
             for (AnnotationMirror annotationMirror : annotationMirrors) {
@@ -96,13 +94,13 @@ public class TemplateProcessor extends AbstractProcessor {
     /**
      * Generate code files
      */
-    private void generateWeixinLoginCode(RoundEnvironment env){
+    private void generateWechatLoginCode(RoundEnvironment env){
         final WechatLoginVisitor visitor = new WechatLoginVisitor();
         visitor.setFiler(processingEnv.getFiler());
         scan(env, WechatLogin.class, visitor);
     }
 
-    private void generateWeixinPayCode(RoundEnvironment env){
+    private void generateWechatPayCode(RoundEnvironment env){
         final WechatPayVisitor visitor = new WechatPayVisitor();
         visitor.setFiler(processingEnv.getFiler());
         scan(env, WechatPay.class, visitor);
